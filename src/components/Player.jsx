@@ -14,12 +14,9 @@ const Player = ({token, setDevice}) => {
     player.addListener('account_error', ({ message }) => { console.error(message); });
     player.addListener('playback_error', ({ message }) => { console.error(message); });
   
-    // Playback status updates
-    player.addListener('player_state_changed', state => { console.log(state); });
-  
     // Ready
     player.addListener('ready', ({ device_id }) => {
-      setDevice(device_id)
+      setDevice(player)
       console.log('Ready with Device ID', device_id);
     });
   

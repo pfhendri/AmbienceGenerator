@@ -1,0 +1,43 @@
+.Controls {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  background: green;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  place-items: center center;
+  gap: 1rem;
+}
+
+.ControllerHolder{
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.ControllerHolder button {
+  margin: 0 1rem;
+  padding: .5rem .8rem;
+  border: solid white .2rem;
+  background: green;
+  color: white;
+  border-radius: .3rem;
+}
+
+.TrackInfo{
+  text-align: center;
+}
+
+@media screen and (max-width: 600px){
+  .ControllerHolder{
+    width: 100%;
+    justify-content: space-around;
+  }
+  .ControllerHolder button {
+    margin: 0;
+  }
+}
